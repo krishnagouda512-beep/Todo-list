@@ -1,0 +1,149 @@
+body{
+  background: radial-gradient(circle, #162030, #375585);
+}
+
+#outer {
+  margin: auto;
+  width: 400px;
+  height: 400px;
+  background-color: rgb(94, 91, 91);
+ border-top: 3px solid rgb(48, 46, 46);
+  overflow: auto;
+  /* firefox */
+  /* scrollbar-width:8px;
+  scrollbar-color:transparent transparent; */
+}
+/*hover effect for firefox*/
+/* #outer:hover{ 
+  scrollbar-width:8px;
+  scrollbar-color: black pink;
+} */
+#outer::-webkit-scrollbar {
+  width: 12px;
+}
+#outer::-webkit-scrollbar-thumb {
+  /* defult hidden */
+  background-color: rgba(231, 228, 228, 0.5);
+  transition: all 0.3s ease;
+}
+#outer::-webkit-scrollbar-track {
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+/* hover effect for webkit browesers */
+#outer:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 249, 249, 0.8);
+}
+#outer:hover::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+#outer:focus::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+#outer::-webkit-scrollbar-button {
+  display: block;
+}
+#outer:hover::-webkit-scrollbar-button {
+  display: none;
+  height: 0;
+  width: 0;
+}
+li {
+
+  display: flex;
+  word-break: break-all;
+  justify-content: space-between;
+  align-items:flex-start;
+  padding: 5px;
+  border-radius: 8px;
+  margin: 5px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-color: rgb(79, 77, 77);
+  color: white;
+}
+li button {
+  background: none;
+  color: red;
+  border: none;
+  padding: 4px 8px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+ul {
+  padding: 0;
+}
+input{
+  height: 35px;
+  width: 250px;
+  color: rgb(18, 18, 18);
+  background-color: rgb(234, 227, 227);
+  font-size: 20px;
+   border: 2px solid #D1D5DB;
+}
+input::placeholder{
+  font-size: 20px;
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+}
+#addtaskbtn{
+  height: 34px;
+  width: 100px;
+  font-size: 17px;
+  font-family:monospace;
+  background-color:#22C55E;
+  color:white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#addtaskbtn:hover{
+  background-color: rgb(35, 242, 17);
+}
+.inner{
+  width:400px;
+  height: 60px;
+  background-color:#F3F4F6;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ justify-content: space-evenly;
+}
+.main{
+  width: 400px;
+  height: 620px;
+  border-radius: 5px;
+  background-color:#1E293B;
+  box-shadow: 2PX 2PX 5PX black;
+  margin: auto;
+}
+.bottom{
+  width: 400px;
+  height: 80px;
+  background-color:#1E293B ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid black;
+}
+#remove{
+  height: 35px;
+  width: 150px;
+  border: none;
+  font-size: 18px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px rgb(240, 4, 4);
+  background-color:#EF4444;
+  color: white;
+  cursor:pointer;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#remove:hover{
+  transition: 0.3s ease;
+  transform:scale(1.05);
+}
+h1{
+  text-decoration: underline double whitesmoke;
+  padding: 10PX 0 0 100PX;
+  color: rgb(241, 234, 234);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
