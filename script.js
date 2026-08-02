@@ -46,13 +46,19 @@ btn.addEventListener("click", function () {
       currentTaskspan = taskText;
       taskEdit.value = taskText.innerText;
     };
-    //update task
-    // updateBtn.addEventListener("click", function () {
-    //   if (currentTaskspan) {
-    //     taskText.innerText = taskEdit.value;
-    //   }
-    //   popup.style.display = "none";
-    // });
+     //cancle edit popup
+    cancelBtn.addEventListener("click", function () {
+    popup.style.display = "none";
+    overlay.style.display = "none";
+  });
+  //update task
+  updateBtn.addEventListener("click", function () {
+    if (currentTaskspan) {
+      currentTaskspan.innerText = taskEdit.value;
+    }
+    popup.style.display = "none";
+    overlay.style.display = "none";
+  }); 
 
     let checkbox = document.createElement("input");
     checkbox.classList.add("checkbox");
