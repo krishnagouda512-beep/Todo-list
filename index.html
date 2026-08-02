@@ -5,26 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="LOGO.jpg" />
-    <title>TO-DO LIST, 
-      FOR EVERY ONE CREAT YOUR OWN TASKS..
-    </title>
-    <link rel="stylesheet" href="Todo.css" />
+    <title>TO-DO LIST, FOR EVERY ONE CREAT YOUR OWN TASKS..</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="main">
-      <h1><span>T</span>ODO LIST</h1>
+      <div class="titel">
+        <input type="checkbox" title="checkedAll" id="allchecked" />
+        <h1><span>T</span>O DO LIST</h1>
+        <label class="switch" title="light/dark">
+          <input type="checkbox" />
+          <span class="slider round"></span>
+        </label>
+      </div>
       <div class="inner">
-        <input type="text" placeholder="Enter your task..." />
-        <button id="addtaskbtn"> <b>Add task</b></button>
+        <input type="text" id="textspace" placeholder="Enter your task..." />
+        <button id="addtaskbtn"><b>Add task</b></button>
       </div>
       <div id="outer">
         <ul></ul>
       </div>
       <div class="bottom">
-        <button id="remove"> <b>Delete All</b></button>
+         <button id="remove"><b>Delete All</b></button> 
+        <button id="save"><b>Save task</b></button> 
       </div>
     </div>
-
-    <script src="app.js"></script>
+    <div id="popup">
+      <h3>Edit your task</h3>
+      <textarea type="text" id="task-edit" placeholder=""></textarea>
+      <div class="popup-inner">
+        <button id="cancel"><b>Cancle</b></button>
+        <button id="update"><b>Update</b></button>
+      </div>
+    </div>
+    <div id="delpopup">
+      <h5>Are you sure to delete all tasks?</h5>
+      <div class="delpopup-inner">
+        <button id="delcancel" name="delpopupCancel" ><b>Cancle</b></button>  
+        <button id="delupdate"><b>Delete</b></button>  
+      </div>
+    </div>
+    <div id="overlay"></div>
+      
+    <script src="script.js"></script>
   </body>
 </html>
